@@ -1,6 +1,9 @@
 import Header from "../../components/Shared/Home/Header";
+import LeftSideNav from "../../components/Shared/Home/LeftSideNav";
 import Navbar from "../../components/Shared/Home/Navbar";
+import RightSideNav from "../../components/Shared/Home/RightSideNav";
 import BreakingNews from "./BreakingNews";
+import News from "./News";
 
 const Home = () => {
     return (
@@ -8,7 +11,17 @@ const Home = () => {
             <Header></Header>
             <BreakingNews></BreakingNews>
             <Navbar></Navbar>
-            <h2 className="text-3xl">Home</h2>
+            <div className="grid md:grid-cols-4 mt-16">
+                <div>
+                    <LeftSideNav></LeftSideNav>
+                </div>
+                <div className="col-span-2">
+                    <News></News>
+                </div>
+                <div>
+                    <RightSideNav></RightSideNav>
+                </div>
+            </div>
         </div>
     );
 };
