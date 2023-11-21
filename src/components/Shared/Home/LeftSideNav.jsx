@@ -1,7 +1,11 @@
+import Categories from "../Navigation/Categories";
+import FavoriteNews from "../Navigation/FavoriteNews";
+
 const LeftSideNav = () => {
     return (
         <div>
-            <h2>Left-Side Navigation</h2>
+            <Categories></Categories>
+            <FavoriteNews></FavoriteNews>
         </div>
     );
 };
