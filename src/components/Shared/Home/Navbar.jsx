@@ -1,7 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
 import DefaultProfile from '../../../assets/user.png'
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const Navbar = () => {
+
+    const { user, userSignOut } = useContext(AuthContext)
 
     const navLinks = <>
         <li><NavLink to='/'>Home</NavLink></li>
@@ -32,7 +36,12 @@ const Navbar = () => {
                         <img alt="default-profile-avatar" src={DefaultProfile} />
                     </div>
                 </label>
-                <Link to='/login'><button className="bg-[#403F3F] px-10 py-2 text-white">LOGIN</button></Link>
+                {
+                    user ? 
+                    <button onClick={userSignOut} className="bg-[#403F3F] px-10 py-2 text-white">LOGOUT</button>
+                    :
+                    <Link to='/login'><button className="bg-[#403F3F] px-10 py-2 text-white">LOGIN</button></Link>
+                }
             </div>
         </div>
     );

@@ -1,11 +1,20 @@
+import { useContext } from "react";
 import Navbar from "../../components/Shared/Home/Navbar";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
+
+    const { createUser } = useContext(AuthContext)
 
     const handleRegister = e => {
         e.preventDefault();
         const form = new FormData(e.currentTarget);
-        console.log(form.get('name'))
+        const email = form.get('email');
+        const password = form.get('password');
+
+        createUser(email, password)
+            .then(response => console.log(response.user))
+            .catch(error => console.error(error))
     }
 
     return (
@@ -41,6 +50,12 @@ const Register = () => {
                                 <span className="label-text text-[#403F3F] font-semibold text-xl mb-3">Password</span>
                             </label>
                             <input type="password" name="password" placeholder="Enter your password" className="input input-bordered  rounded" required />
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <input type="checkbox" className="checkbox" />
+                            <label className="label cursor-pointer">
+                                <span className="label-text text-[#706F6F]">Accept <span className="font-semibold">Terms & Conditions</span></span>
+                            </label>
                         </div>
                         <div className="form-control mt-6">
                             <button className="bg-[#403F3F] text-white font-semibold text-lg py-4 rounded">Register</button>
