@@ -8,7 +8,7 @@ const FavoriteNews = () => {
     return (
         <div className='space-y-4 mt-8'>
             <div className='space-y-5'>
-                <img src={sideNews1} alt="side-news" />
+                <img className='w-full' src={sideNews1} alt="side-news" />
                 <h2 className="text-xl font-semibold text-[#403F3F]">Bayern Slams Authorities Over Flight Delay to Club World Cup</h2>
                 <div className='flex gap-5'>
                     <p className="text-[#403F3F]">Sports</p>
@@ -19,7 +19,7 @@ const FavoriteNews = () => {
                 </div>
             </div>
             <div className='space-y-5'>
-                <img src={sideNews2} alt="side-news" />
+                <img className='w-full' src={sideNews2} alt="side-news" />
                 <h2 className="text-xl font-semibold text-[#403F3F]">Bayern Slams Authorities Over Flight Delay to Club World Cup</h2>
                 <div className='flex gap-5'>
                     <p className="text-[#403F3F]">Sports</p>
@@ -30,7 +30,7 @@ const FavoriteNews = () => {
                 </div>
             </div>
             <div className='space-y-5'>
-                <img src={sideNews3} alt="side-news" />
+                <img className='w-full' src={sideNews3} alt="side-news" />
                 <h2 className="text-xl font-semibold text-[#403F3F]">Bayern Slams Authorities Over Flight Delay to Club World Cup</h2>
                 <div className='flex gap-5'>
                     <p className="text-[#403F3F]">Sports</p>

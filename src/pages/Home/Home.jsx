@@ -4,8 +4,12 @@ import Navbar from "../../components/Shared/Home/Navbar";
 import RightSideNav from "../../components/Shared/Home/RightSideNav";
 import BreakingNews from "./BreakingNews";
 import News from "./News";
+import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
+
+    const news = useLoaderData();
+
     return (
         <div className="max-w-6xl mx-auto">
             <Header></Header>
@@ -16,7 +20,7 @@ const Home = () => {
                     <LeftSideNav></LeftSideNav>
                 </div>
                 <div className="col-span-2">
-                    <News></News>
+                    <News news={news}></News>
                 </div>
                 <div>
                     <RightSideNav></RightSideNav>
