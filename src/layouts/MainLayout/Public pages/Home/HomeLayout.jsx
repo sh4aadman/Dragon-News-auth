@@ -10,11 +10,9 @@ function HomeLayout() {
       <main className="w-5/6 mx-auto my-8">
         <LatestNews />
         <Navbar />
-        <section className="left_nav"></section>
-        <section className="main">
+        <Outlet>
           <Outlet></Outlet>
-        </section>
-        <section className="left_nav"></section>
+        </Outlet>
       </main>
     </>
   );
