@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router";
-import NewsCard from "../../../components/common/News Card/NewsCard";
+import NewsCard from "../../../features/news/components/NewsCard";
 
 function News() {
   const news = useLoaderData();
